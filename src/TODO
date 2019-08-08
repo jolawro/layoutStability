@@ -1,0 +1,23 @@
+Optimized carousel
+Sticky footer problem 
+Article
+LQUIF
+cookies - linked in
+gallery of squares
+preloaders with &:after padding-bottom
+https://web.dev/native-lazy-loading
+    intersection observer https://developers.google.com/web/updates/2016/04/intersectionobserver
+    implement resize, scroll & orientationchange
+SVG distracted promo image
+webm video format istead of gif
+
+const imageObserver = new IntersectionObserver((entries, imgObserver) => {
+    entries.forEach((entry) => {
+        if(entry.isIntersecting) {
+            const lazyImage = entry.target
+            lazyImage.src = lazyImage.dataset.src
+        }
+    })
+});
+
+show how its done, not only talk how you should do it
