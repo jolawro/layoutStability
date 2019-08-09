@@ -4,7 +4,7 @@ import { Menu } from "../Menu/Menu";
 import Icons from "../Icon/Icons";
 import { Logo } from "../Logo/Logo";
 
-const Page = ({ title, children }) => {
+const Page = ({ title, contentLoaded, children }) => {
   return (
     <>
       <Layout>
@@ -19,9 +19,9 @@ const Page = ({ title, children }) => {
               <MainHeading>{title}</MainHeading>
             </ContentContainer>
           </HeadingContainer>
-          <ContentContainer>{children}</ContentContainer>
+          <ContentContainer>{contentLoaded && children}</ContentContainer>
         </Content>
-        <Footer />
+        {contentLoaded && <Footer />}
       </Layout>
     </>
   );

@@ -1,14 +1,14 @@
-Optimized carousel
-Sticky footer problem 
-Article
+Optimized carousel  
+Sticky footer problem                                                                                   DONE
+Article                                                                                                 DONE    
 LQUIF
-cookies - linked in
-gallery of squares
-preloaders with &:after padding-bottom
+cookies - linked in 
+gallery of squares                                                                                      DONE
+preloaders of images
 https://web.dev/native-lazy-loading
     intersection observer https://developers.google.com/web/updates/2016/04/intersectionobserver
     implement resize, scroll & orientationchange
-SVG distracted promo image
+SVG distracted promo image                                                                              DONE
 webm video format istead of gif
 
 const imageObserver = new IntersectionObserver((entries, imgObserver) => {

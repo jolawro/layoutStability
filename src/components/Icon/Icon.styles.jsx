@@ -1,8 +1,9 @@
 import styled from "styled-components";
 import { fromTheme } from "../../helpers/constants/colors";
+import { GAPS } from "../../helpers/constants/gaps";
 
 export const ICON_SIZES = {
-  s: "8px",
+  s: "10px",
   m: "16px"
 };
 
@@ -13,14 +14,20 @@ export const IconSVGContainer = styled.svg`
   fill: ${fromTheme.base("primary")};
 `;
 
-export const CircleIconContainer = styled.span`
+export const CircleIconContainer = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 20px;
-  height: 20px;
+  width: ${GAPS.s};
+  height: ${GAPS.s};
+  border: 0;
   border-radius: 50%;
-  background-color: ${fromTheme.bg("secondary")};
-  font-weight: 100;
-  margin-left: 10px;
+  outline: 0;
+  background-color: ${fromTheme.bg("tertiary")};
+  cursor: pointer;
+  trnasition: transform 0.2s;
+
+  &:hover ${IconSVGContainer} {
+    transform: scale(1.1);
+  }
 `;

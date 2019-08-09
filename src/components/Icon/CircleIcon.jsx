@@ -4,7 +4,7 @@ import Icon from ".";
 
 export const CircleIcon = ({ name }) => (
   <CircleIconContainer>
-    <Icon name={name} size="s" />
+    <Icon name={name} size="m" />
   </CircleIconContainer>
 );
 

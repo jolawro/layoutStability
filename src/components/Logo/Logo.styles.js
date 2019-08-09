@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { fromTheme } from "../../helpers/constants/colors";
 
 export const LogoContainer = styled.div`
   display: flex;
@@ -20,5 +21,7 @@ export const LogoSubtitle = styled.span`
 
 export const LogoImage = styled.img`
   margin-left: 20px;
+  width: 50px;
   height: 50px;
+  background-color: ${fromTheme.bg("primary")};
 `;
