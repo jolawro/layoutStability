@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { ContentContainer, Header, Layout, Content, Footer, FooterCopyright } from "./Page.styles";
 import { Menu } from "../Menu/Menu";
 import { Logo } from "../Logo/Logo";

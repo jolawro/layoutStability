@@ -45,7 +45,6 @@ const ArticlesCarousel = ({ scrolledTo, setScrolledTo, visibleItems, setVisibleI
 
   function getImageSrc(id, imageSrc) {
     if (isVisible(id) || !window.IntersectionObserver) {
-      console.log(visibleItems, "found", +id);
       return imageSrc;
     }
     return "";

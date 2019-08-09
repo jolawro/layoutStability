@@ -19,6 +19,7 @@ const Article = () => {
     timedoutPromise(3000).then(() => setCookiesVisible(true));
   }, []);
 
+  console.log("render");
   return (
     <>
       <Page contentLoaded={contentVisible} cookiesVisible={cookiesVisible} setCookiesVisible={setCookiesVisible}>

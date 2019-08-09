@@ -5,6 +5,7 @@ import { Heading } from "../Page/Page.styles";
 export const P = styled.p`
   margin: ${GAPS.xs} 0;
   line-height: 1.5;
+  text-align: justify;
 `;
 
 export const SectionHeading = styled(Heading).attrs({
