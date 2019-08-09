@@ -4,9 +4,14 @@ import { GAPS } from "../../helpers/constants/gaps";
 
 export const HeroContainer = styled.div`
   position: relative;
-  display: flex;
   margin-bottom: ${GAPS.m};
   background-color: ${fromTheme.base("subtle")};
+
+  &::after {
+    content: "";
+    display: block;
+    padding-top: ${Math.floor((300 / 700) * 100)}%;
+  }
 `;
 
 export const HeroTextContainer = styled.div`
@@ -42,4 +47,12 @@ export const HeroText = styled.h3`
       filter: url("#squiggly-4");
     }
   }
+`;
+
+export const HeroImage = styled.img`
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
 `;

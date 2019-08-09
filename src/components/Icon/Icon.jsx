@@ -9,8 +9,8 @@ const Icon = ({ name, size = "m" }) => {
   );
 };
 
-export const CircleIcon = ({ name }) => (
-  <CircleIconContainer>
+export const CircleIcon = ({ name, ...rest }) => (
+  <CircleIconContainer {...rest}>
     <Icon name={name} size="s" />
   </CircleIconContainer>
 );

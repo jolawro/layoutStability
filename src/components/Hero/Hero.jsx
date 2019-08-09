@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { HeroContainer, HeroText, HeroTextContainer } from "./Hero.styles";
+import { HeroContainer, HeroText, HeroTextContainer, HeroImage } from "./Hero.styles";
 import DisturbFilter from "./DisturbFiler";
 
 const Hero = ({ imageSrc }) => {
@@ -12,7 +12,7 @@ const Hero = ({ imageSrc }) => {
         setShiftScore(totalScore + entry.value);
       }
     });
-    observer.observe({ type: "layoutShift", buffered: true });
+    // observer.observe({ type: "layoutShift", buffered: true });
 
     return () => {
       observer.disconnect();
@@ -22,7 +22,7 @@ const Hero = ({ imageSrc }) => {
   return (
     <HeroContainer>
       <DisturbFilter frequency={shiftScore / 10} />
-      <img src={imageSrc} alt="Hero" width="100%" intrinsicsize="1400 x 700" />
+      <HeroImage src={imageSrc} alt="Hero" intrinsicsize="1400 x 700" />
       <HeroTextContainer>
         <HeroText>Unstable</HeroText>
       </HeroTextContainer>

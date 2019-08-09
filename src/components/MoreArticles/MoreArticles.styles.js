@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { GAPS } from "../../helpers/constants/gaps";
 import { GalleryItem } from "../Gallery/Gallery.styles";
+import { fromTheme } from "../../helpers/constants/colors";
 
 export const CarouselContainer = styled.div`
   display: flex;
@@ -18,7 +19,6 @@ export const CarouselContent = styled.div`
 `;
 
 export const CarouselItem = styled(GalleryItem)`
-  padding: 2px;
   display: block;
   float: left;
   box-sizing: border-box;
@@ -28,15 +28,14 @@ export const CarouselItem = styled(GalleryItem)`
 `;
 
 export const Carousel = styled.ul`
-display: block;
+  display: block;
   position: absolute;
-  left: 0;
   top: 0;
   height: 100%;
   width: ${({ nOfItems }) => nOfItems * 300}px;
-  transform: translateX(${({ scrolledTo }) => -scrolledTo * 600}px;)
-  transition: transform .3s;
-  
+  transform: translateX(${({ scrolledTo }) => -scrolledTo * 600}px);
+  transition: transform 0.5s;
+
   ${CarouselItem} {
     width: calc(100% / ${({ nOfItems }) => nOfItems});
   }
@@ -44,4 +43,23 @@ display: block;
 
 export const Articles = styled.div`
   margin: ${GAPS.m} 0;
+`;
+
+export const Article = styled.div`
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  background-color: ${fromTheme.base("primary")}55;
+`;
+
+export const ArticleHeading = styled.h4`
+  margin: 20px;
+  font-weight: bold;
+  font-size: 18px;
+  color: ${fromTheme.bg("tertiary")};
 `;

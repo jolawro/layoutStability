@@ -1,36 +1,22 @@
 import React, { useState } from "react";
-import { CarouselContainer, Carousel, CarouselItem, CarouselContent, Articles } from "./MoreArticles.styles";
-import { spawnTeaserImages } from "../../helpers/spawnImages";
-import { GalleryImage } from "../Gallery/Gallery.styles";
-import { CircleIcon } from "../Icon/Icon";
+import { Articles } from "./MoreArticles.styles";
 import { SectionHeading } from "../Layout/Layout.styles";
+import ArticlesCarousel from "./ArticlesCarousel";
 
 const MoreArticles = () => {
   const [scrolledTo, setScrolledTo] = useState(0);
+  const [visibleItems, setVisibleItems] = useState([0, 1]);
+
+  const props = {
+    scrolledTo,
+    setScrolledTo,
+    visibleItems,
+    setVisibleItems
+  };
   return (
     <Articles>
-      <SectionHeading>More articles</SectionHeading>
-      <CarouselContainer>
-        <CircleIcon name="i-arrow-right-07" click={() => setScrolledTo(scrolledTo + 1)} />
-        <CarouselContent>
-          <Carousel nOfItems={10} scrolledTo={scrolledTo}>
-            {spawnTeaserImages(10).map((imageSrc, i) => {
-              return (
-                <CarouselItem key={i}>
-                  <GalleryImage src={imageSrc} alt="article" />
-                </CarouselItem>
-              );
-            })}
-          </Carousel>
-        </CarouselContent>
-        <CircleIcon
-          name="i-arrow-right-07"
-          click={() => {
-            console.log("scrolledTo");
-            setScrolledTo(scrolledTo + 1);
-          }}
-        />
-      </CarouselContainer>
+      <SectionHeading>More articles {visibleItems.join(", ")}</SectionHeading>
+      <ArticlesCarousel {...props} />
     </Articles>
   );
 };
