@@ -34,7 +34,7 @@ export const Carousel = styled.ul`
   height: 100%;
   width: ${({ nOfItems }) => nOfItems * 300}px;
   transform: translateX(${({ scrolledTo }) => -scrolledTo * 600}px);
-  transition: transform 0.5s;
+  transition: transform 0.8s;
 
   ${CarouselItem} {
     width: calc(100% / ${({ nOfItems }) => nOfItems});
