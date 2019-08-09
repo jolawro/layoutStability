@@ -2,9 +2,11 @@ import React from "react";
 import Icon from "../Icon/Icon";
 import { ActiveMenuZone, MenuContainer, MenuBubble, MenuBubbleLink } from "./Menu.styles";
 import { GooFilter } from "./GooFilter";
+import Icons from "../Icon/Icons";
 
 export const Menu = () => (
   <ActiveMenuZone>
+    <Icons />
     <GooFilter />
     <MenuContainer>
       <MenuBubble index={3}>
@@ -13,8 +15,8 @@ export const Menu = () => (
         </MenuBubbleLink>
       </MenuBubble>
       <MenuBubble index={2}>
-        <MenuBubbleLink to="/cat">
-          <Icon name="i-cat-03" />
+        <MenuBubbleLink to="/article">
+          <Icon name="i-sheet-text" />
         </MenuBubbleLink>
       </MenuBubble>
       <MenuBubble index={1}>

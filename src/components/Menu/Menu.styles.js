@@ -52,12 +52,13 @@ export const MenuBubbleLink = styled(Link)`
   display: flex;
   justify-content: center;
   align-items: center;
+  color: ${fromTheme.base("primary")};
 `;
 
 export const ActiveMenuZone = styled.div`
   position: fixed;
   z-index: 100;
-  top: 10px;
+  top: 12px;
   right: 15px;
   height: ${MENU_DIAMETER}px;
   padding: ${INTERACTIVE_AREA_RADIUS};

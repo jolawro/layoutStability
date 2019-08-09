@@ -4,12 +4,14 @@ import { ThemeProvider } from "styled-components";
 import { THEMES } from "./helpers/constants/colors";
 import Home from "./components/Home/Home";
 import "./App.css";
+import Article from "./components/Article/Atricle";
 
 const App = () => {
   return (
     <Router>
       <ThemeProvider theme={THEMES.light}>
         <>
+          <Route exact path="/article" component={Article} />
           <Route exact path="/" component={Home} />
         </>
       </ThemeProvider>
