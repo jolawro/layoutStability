@@ -56,6 +56,7 @@ export const Content = styled.main`
   flex-grow: 1;
   padding-bottom: ${GAPS.m};
   background-color: ${fromTheme.bg("primary")};
+  position: relative;
 `;
 
 export const Header = styled.header`

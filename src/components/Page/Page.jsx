@@ -3,16 +3,10 @@ import { ContentContainer, Header, Layout, Content, Footer, FooterCopyright } fr
 import { Menu } from "../Menu/Menu";
 import { Logo } from "../Logo/Logo";
 import Cookies from "../Cookies/Cookies";
-import { timedoutPromise } from "../../helpers/timedoutPromise";
 import Spinner from "../Spinner/Spinner";
+import { Link } from "react-router-dom";
 
-const Page = ({ contentLoaded, children }) => {
-  const [cookiesVisible, setCookiesVisible] = useState(false);
-
-  useEffect(() => {
-    timedoutPromise(3000).then(() => setCookiesVisible(true));
-  }, []);
-
+const Page = ({ contentLoaded, cookiesVisible, setCookiesVisible, children }) => {
   return (
     <>
       <Menu />
@@ -23,7 +17,9 @@ const Page = ({ contentLoaded, children }) => {
       />
       <Layout cookiesVisible={cookiesVisible}>
         <Header>
-          <Logo />
+          <Link to="/">
+            <Logo />
+          </Link>
         </Header>
 
         <Content>{contentLoaded ? children : <Spinner />}</Content>

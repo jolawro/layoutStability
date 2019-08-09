@@ -58,8 +58,8 @@ export const MenuBubbleLink = styled(Link)`
 export const ActiveMenuZone = styled.div`
   position: fixed;
   z-index: 100;
-  top: 12px;
-  right: 15px;
+  top: 10px;
+  right: 13px;
   height: ${MENU_DIAMETER}px;
   padding: ${INTERACTIVE_AREA_RADIUS};
   border-radius: ${INTERACTIVE_AREA_RADIUS};

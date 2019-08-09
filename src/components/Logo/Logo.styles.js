@@ -13,6 +13,7 @@ export const LogoTitle = styled.h1`
   position: relative;
   top: 2px;
   font-size: 22px;
+  color: ${fromTheme.base("primary")};
 `;
 
 export const LogoSubtitle = styled.span`

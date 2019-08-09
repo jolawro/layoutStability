@@ -10,14 +10,18 @@ import { HeadingContainer, ContentContainer, MainHeading } from "../Page/Page.st
 
 const Article = () => {
   const [contentVisible, setContentVisible] = useState(false);
+  const [cookiesVisible, setCookiesVisible] = useState(false);
 
   useEffect(function() {
     timedoutPromise(2500).then(() => setContentVisible(true));
   });
+  useEffect(() => {
+    timedoutPromise(3000).then(() => setCookiesVisible(true));
+  }, []);
 
   return (
     <>
-      <Page contentLoaded={contentVisible}>
+      <Page contentLoaded={contentVisible} cookiesVisible={cookiesVisible} setCookiesVisible={setCookiesVisible}>
         <HeadingContainer>
           <ContentContainer>
             <MainHeading>Lorem ipsum</MainHeading>
