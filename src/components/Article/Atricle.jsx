@@ -29,7 +29,7 @@ const Article = () => {
           </ContentContainer>
         </HeadingContainer>
         <ContentContainer>
-          <Hero imageSrc="https://picsum.photos/1400/600" />
+          <Hero />
           <P>{LOREM_IPSUM}</P>
           <P>{LOREM_IPSUM}</P>
           <Gallery numOfImages={16} />

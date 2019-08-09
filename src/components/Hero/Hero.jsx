@@ -1,9 +1,17 @@
 import React, { useState, useEffect } from "react";
 import { HeroContainer, HeroText, HeroTextContainer, HeroImage, HeroStability } from "./Hero.styles";
 import DisturbFilter from "./DisturbFilter";
+import hero from "./hero5.jpg";
+import { Invisible } from "../Icon/Icons";
 
-const Hero = ({ imageSrc }) => {
+// console.log(hero.preSrc);
+
+// console.log(hero.src); // that's the original image URL to load later!
+
+const Hero = () => {
   const [shiftScore, setShiftScore] = useState(0);
+  const [imageLoaded, setImageLoaded] = useState(false);
+
   useEffect(function() {
     let totalScore = 0;
     const observer = new PerformanceObserver(list => {
@@ -22,7 +30,10 @@ const Hero = ({ imageSrc }) => {
   return (
     <HeroContainer>
       <DisturbFilter frequency={shiftScore / 10} />
-      <HeroImage src={"/hero5.jpg"} alt="Hero" intrinsicsize="1400 x 700" />
+      <HeroImage src={imageLoaded ? hero.src : hero.preSrc} alt="Hero" intrinsicsize="1400 x 700" />
+      <Invisible>
+        <img src={hero.src} onLoad={() => setImageLoaded(true)} alt="Hero" />
+      </Invisible>
       <HeroTextContainer>
         <HeroText>
           Layout is <HeroStability stable={!shiftScore}>{shiftScore ? "Unstable" : "Stable"}</HeroStability>

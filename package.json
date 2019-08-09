@@ -130,5 +130,8 @@
     "presets": [
       "react-app"
     ]
+  },
+  "devDependencies": {
+    "lqip-loader": "^2.2.0"
   }
 }
