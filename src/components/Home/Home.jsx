@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-// import { Layout, Header, Content, Footer, FooterLinks, Wrapper } from "../Layout/Layout.styles";
 import { timedoutPromise } from "../../helpers/timedoutPromise";
 import { LOREM_IPSUM } from "../../helpers/lorem";
 import Page from "../Page/Page";
@@ -12,7 +11,7 @@ const Home = () => {
   const [contentVisible, setContentVisible] = useState(false);
 
   useEffect(function() {
-    timedoutPromise(0).then(() => setContentVisible(true));
+    timedoutPromise(2500).then(() => setContentVisible(true));
   });
 
   return (

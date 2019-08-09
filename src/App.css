@@ -133,3 +133,7 @@ table {
 body {
   font-family: Dosis, Arial, Helvetica, sans-serif;
 }
+
+strong {
+  font-weight: bold;
+}

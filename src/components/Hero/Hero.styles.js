@@ -26,9 +26,14 @@ export const HeroTextContainer = styled.div`
 `;
 
 export const HeroText = styled.h3`
-  font-size: 30px;
-  color: ${fromTheme.bg("tertiary")}
-  animation: squiggly-anim 0.34s linear infinite;
+  font-size: 42px;
+  font-weight: 100;
+  color: ${fromTheme.base("secondary")};
+`;
+export const HeroStability = styled.strong`
+  font-weight: bold;
+  color: ${({ stable }) => (stable ? "inherit" : "#e2234c")};
+  animation: ${({ stable }) => (stable ? "none" : "squiggly-anim 0.34s linear infinite")};
 
   @keyframes squiggly-anim {
     0% {

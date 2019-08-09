@@ -10,5 +10,6 @@ export const P = styled.p`
 export const SectionHeading = styled(Heading).attrs({
   tag: "h4"
 })`
+  font-size: 18px;
   text-align: center;
 `;

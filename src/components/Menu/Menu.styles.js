@@ -32,7 +32,6 @@ export const MenuBubble = styled.li`
   cursor: pointer;
 
   svg {
-
     transition: transform 0.2s linear;
   }
 
@@ -58,7 +57,7 @@ export const MenuBubbleLink = styled(Link)`
 export const ActiveMenuZone = styled.div`
   position: fixed;
   z-index: 100;
-  top: calc(-${INTERACTIVE_AREA_RADIUS} - 20px);
+  top: 10px;
   right: 15px;
   height: ${MENU_DIAMETER}px;
   padding: ${INTERACTIVE_AREA_RADIUS};

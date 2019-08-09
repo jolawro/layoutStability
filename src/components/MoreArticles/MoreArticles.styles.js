@@ -54,7 +54,7 @@ export const Article = styled.div`
   width: 100%;
   display: flex;
   align-items: flex-end;
-  background-color: ${fromTheme.base("primary")}55;
+  background-color: ${fromTheme.base("primary")}66;
 `;
 
 export const ArticleHeading = styled.h4`

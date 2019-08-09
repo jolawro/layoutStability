@@ -4,14 +4,15 @@ import { GAPS } from "../../helpers/constants/gaps";
 
 export const ICON_SIZES = {
   s: "10px",
-  m: "16px"
+  m: "16px",
+  l: "40px"
 };
 
 export const IconSVGContainer = styled.svg`
   display: block;
   width: ${({ size }) => ICON_SIZES[size]};
   height: ${({ size }) => ICON_SIZES[size]};
-  fill: ${fromTheme.base("primary")};
+  fill: currentColor;
 `;
 
 export const CircleIconContainer = styled.button`

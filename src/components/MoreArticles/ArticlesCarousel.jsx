@@ -53,7 +53,7 @@ const ArticlesCarousel = ({ scrolledTo, setScrolledTo, visibleItems, setVisibleI
 
   return (
     <CarouselContainer>
-      <CircleIcon name="i-arrow-right-07" onClick={() => setScrolledTo(Math.max(0, scrolledTo - 1))} />
+      <CircleIcon name="i-arrow-left-07" onClick={() => setScrolledTo(Math.max(0, scrolledTo - 1))} />
       <CarouselContent ref={carouselRef}>
         <Carousel nOfItems={NUM_OF_IMAGES} scrolledTo={scrolledTo}>
           {spawnTeaserImages(NUM_OF_IMAGES).map((imageSrc, i) => {

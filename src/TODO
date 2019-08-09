@@ -1,23 +1,26 @@
-Optimized carousel  
-Sticky footer problem                                                                                   DONE
-Article                                                                                                 DONE    
-LQUIF
-cookies - linked in 
-gallery of squares                                                                                      DONE
-preloaders of images
-https://web.dev/native-lazy-loading
-    intersection observer https://developers.google.com/web/updates/2016/04/intersectionobserver
-    implement resize, scroll & orientationchange
-SVG distracted promo image                                                                              DONE
+Optimized carousel                                     DONE
+Sticky footer problem                                  DONE
+Article                                                DONE    
+LQIP
+cookies - linked in                                    DONE
+gallery of squares                                     DONE
+preloaders of images                                   DONE
+intersection observer                                  DONE
+SVG distracted promo image                             DONE
 webm video format istead of gif
+routing
+welcome page
+put it on github
+stable if stable
 
-const imageObserver = new IntersectionObserver((entries, imgObserver) => {
-    entries.forEach((entry) => {
-        if(entry.isIntersecting) {
-            const lazyImage = entry.target
-            lazyImage.src = lazyImage.dataset.src
-        }
-    })
-});
-
+Notes:
+https://web.dev/native-lazy-loading                                                                     
+intersection observer vs implement resize, scroll & orientationchange
 show how its done, not only talk how you should do it
+
+If you want to get fancy, you can load the high quality 
+image in a hidden IMG tag, and then swap the low quality 
+image with it at the onload event. This will prevent the 
+low quality image from disappearing before the full quality
+image is fully downloaded, which can hinder the user 
+experience.
