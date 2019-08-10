@@ -28,22 +28,6 @@ const Article = () => {
     fetchArticle();
   }, []);
 
-  function renderArticle() {
-    return (
-      article &&
-      article.map((section, i) => {
-        switch (section.type) {
-          case "text":
-            return <P key={i}>{section.data}</P>;
-          case "gallery":
-            return <Gallery key={i} images={section.data} />;
-          default:
-            return "Unknown type";
-        }
-      })
-    );
-  }
-
   function renderPromo() {
     return (
       <>
@@ -70,12 +54,28 @@ const Article = () => {
     <>
       <Page {...props}>
         <ContentContainer>
-          {renderArticle()}
+          {renderArticle(article)}
           <MoreArticles />
         </ContentContainer>
       </Page>
     </>
   );
 };
+
+function renderArticle(article) {
+  return (
+    article &&
+    article.map((section, i) => {
+      switch (section.type) {
+        case "text":
+          return <P key={i}>{section.data}</P>;
+        case "gallery":
+          return <Gallery key={i} images={section.data} />;
+        default:
+          return "Unknown type";
+      }
+    })
+  );
+}
 
 export default Article;
