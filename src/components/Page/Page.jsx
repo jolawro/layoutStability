@@ -6,7 +6,7 @@ import Cookies from "../Cookies/Cookies";
 import Spinner from "../Spinner/Spinner";
 import { Link } from "react-router-dom";
 
-const Page = ({ contentLoaded, cookiesVisible, setCookiesVisible, children }) => {
+const Page = ({ contentLoaded, cookiesVisible, setCookiesVisible, renderPromo, children }) => {
   return (
     <>
       <Menu />
@@ -21,8 +21,10 @@ const Page = ({ contentLoaded, cookiesVisible, setCookiesVisible, children }) =>
             <Logo />
           </Link>
         </Header>
-
-        <Content>{contentLoaded ? children : <Spinner />}</Content>
+        <Content>
+          {renderPromo && renderPromo()}
+          {contentLoaded ? children : <Spinner />}
+        </Content>
 
         {contentLoaded && (
           <Footer>

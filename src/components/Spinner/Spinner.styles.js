@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { fromTheme } from "../../helpers/constants/colors";
+import { GAPS } from "../../helpers/constants/gaps";
 
 export const SpinnerIcon = styled.div`
   margin: 0;
@@ -16,9 +17,9 @@ export const SpinnerIcon = styled.div`
 `;
 
 export const SpinnerContainer = styled.div`
-  width: 100%;
-  height: 50vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  margin-top: ${GAPS.m};
 `;

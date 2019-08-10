@@ -1,12 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { HeroContainer, HeroText, HeroTextContainer, HeroImage, HeroStability } from "./Hero.styles";
 import DisturbFilter from "./DisturbFilter";
-import hero from "./hero5.jpg";
+import hero from "./hero.jpg";
 import { Invisible } from "../Icon/Icons";
-
-// console.log(hero.preSrc);
-
-// console.log(hero.src); // that's the original image URL to load later!
 
 const Hero = () => {
   const [shiftScore, setShiftScore] = useState(0);

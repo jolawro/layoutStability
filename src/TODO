@@ -1,26 +1,18 @@
 Optimized carousel                                     DONE
 Sticky footer problem                                  DONE
 Article                                                DONE    
-LQIP
+LQIP                                                   DONE
 cookies - linked in                                    DONE
 gallery of squares                                     DONE
 preloaders of images                                   DONE
 intersection observer                                  DONE
 SVG distracted promo image                             DONE
-webm video format istead of gif
-routing
-welcome page
-put it on github
-stable if stable
+routing                                                DONE
+welcome page                                           DONE
+put it on github                                       DONE
+stable if stable                                       DONE
 
 Notes:
 https://web.dev/native-lazy-loading                                                                     
 intersection observer vs implement resize, scroll & orientationchange
 show how its done, not only talk how you should do it
-
-If you want to get fancy, you can load the high quality 
-image in a hidden IMG tag, and then swap the low quality 
-image with it at the onload event. This will prevent the 
-low quality image from disappearing before the full quality
-image is fully downloaded, which can hinder the user 
-experience.

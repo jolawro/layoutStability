@@ -30,6 +30,7 @@ export const HeroText = styled.h3`
   font-weight: 100;
   color: ${fromTheme.base("secondary")};
 `;
+
 export const HeroStability = styled.strong`
   font-weight: bold;
   color: ${({ stable }) => (stable ? "inherit" : "#e2234c")};

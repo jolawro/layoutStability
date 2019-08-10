@@ -10,7 +10,7 @@ export const Menu = () => (
     <GooFilter />
     <MenuContainer>
       <MenuBubble index={3}>
-        <MenuBubbleLink to="/">
+        <MenuBubbleLink target="_blank" to="https://github.com/ksymena/layoutStability">
           <Icon name="i-bug-03" />
         </MenuBubbleLink>
       </MenuBubble>
