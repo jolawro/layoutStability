@@ -48,8 +48,6 @@ export const Layout = styled.div`
   width: 100%;
   min-height: 100vh;
   color: ${fromTheme.base("primary")};
-  transform: translateY(${({ cookiesVisible }) => (cookiesVisible ? 0 : `-${GAPS.s}`)});
-  transition: transform 0.3s;
 `;
 
 export const Content = styled.main`

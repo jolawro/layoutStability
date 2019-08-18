@@ -10,12 +10,8 @@ const Page = ({ contentLoaded, cookiesVisible, setCookiesVisible, renderPromo, c
   return (
     <>
       <Menu />
-      <Cookies
-        onClick={() => {
-          setCookiesVisible(false);
-        }}
-      />
-      <Layout cookiesVisible={cookiesVisible}>
+      <Cookies />
+      <Layout>
         <Header>
           <Link to="/">
             <Logo />
