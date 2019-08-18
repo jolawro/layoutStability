@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { timedoutPromise } from "../../helpers/timedoutPromise";
 import Page from "../Page/Page";
 import { P } from "../Layout/Layout.styles";
 import Hero from "../Hero/Hero";
@@ -8,13 +7,8 @@ import MoreArticles from "../MoreArticles/MoreArticles";
 import { HeadingContainer, ContentContainer, MainHeading } from "../Page/Page.styles";
 
 const Article = () => {
-  const [cookiesVisible, setCookiesVisible] = useState(false);
   const [article, setArticle] = useState(null);
-
-  useEffect(() => {
-    timedoutPromise(3000).then(() => setCookiesVisible(true));
-  }, []);
-
+  
   useEffect(() => {
     const fetchArticle = async () => {
       const res = await fetch("http://localhost:8039/get-article?gallerySize=10");
@@ -45,8 +39,6 @@ const Article = () => {
 
   const props = {
     contentLoaded: !!article,
-    cookiesVisible,
-    setCookiesVisible,
     renderPromo
   };
 
