@@ -26,7 +26,8 @@ export const HomeContainer = styled.div`
     left: 0;
     height: 100%;
     width: 100%;
-    background: url(/hero1.jpg);
+    background-image: url(/hero1.jpg);
+    background-size: cover;
     opacity: 0.4;
   }
 `;
@@ -40,7 +41,7 @@ export const HomeTitle = styled.h1`
 
 export const HomeSubtitle = styled.h2`
   font-size: 25px;
-  font-weight: 100;
+  font-weight: 300;
   margin-bottom: 46px;
   ${pushForward};
 `;

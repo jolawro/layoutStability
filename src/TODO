@@ -16,3 +16,17 @@ Notes:
 https://web.dev/native-lazy-loading                                                                     
 intersection observer vs implement resize, scroll & orientationchange
 show how its done, not only talk how you should do it
+
+
+Do zaprezentowania:
+layout shifts
+no unsized media
+aspect ratio boxes
+lqip
+Ładowanie SVG
+foit fout - webfont loader
+cookies request animation frame
+
+bonus:
+react loads
+intersection observer

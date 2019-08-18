@@ -1,0 +1,27 @@
+html {
+  background-color: #e4eaf0;
+  font-family: Dosis;
+}
+
+.preloader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.preloader__image {
+  animation: spin infinite 0.8s linear;
+  line-height: 0;
+  color: #d5dde7;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

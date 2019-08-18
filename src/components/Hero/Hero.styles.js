@@ -27,7 +27,7 @@ export const HeroTextContainer = styled.div`
 
 export const HeroText = styled.h3`
   font-size: 42px;
-  font-weight: 100;
+  font-weight: 300;
   color: ${fromTheme.base("secondary")};
 `;
 

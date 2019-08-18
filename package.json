@@ -56,13 +56,14 @@
     "terser-webpack-plugin": "1.2.3",
     "ts-pnp": "1.1.2",
     "url-loader": "1.1.2",
+    "webfontloader": "^1.6.28",
     "webpack": "4.29.6",
     "webpack-dev-server": "3.2.1",
     "webpack-manifest-plugin": "2.0.4",
     "workbox-webpack-plugin": "4.2.0"
   },
   "scripts": {
-    "start": "node scripts/start.js",
+    "start": "concurrently --kill-others \"node node/main.js\" \"node scripts/start.js\"",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js"
   },
@@ -132,6 +133,7 @@
     ]
   },
   "devDependencies": {
+    "concurrently": "^4.1.1",
     "lqip-loader": "^2.2.0"
   }
 }

@@ -17,7 +17,7 @@ export const LogoTitle = styled.h1`
 `;
 
 export const LogoSubtitle = styled.span`
-  font-weight: 100;
+  font-weight: 300;
 `;
 
 export const LogoImage = styled.img`
