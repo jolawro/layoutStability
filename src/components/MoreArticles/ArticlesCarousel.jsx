@@ -55,7 +55,7 @@ const ArticlesCarousel = ({ articles, scrolledTo, setScrolledTo, visibleItems, s
           {articles.map(({ image, title }, i) => {
             return (
               <CarouselItem key={i}>
-                <GalleryImage width={image.width} height={image.height} src={getImageSrc(i, image.src)} id={i} alt="article" ref={imagesRefs.current[i]} />
+                <img intrinsicsize={`${image.width}x${image.height}`} src={getImageSrc(i, image.src)} id={i} alt="article" ref={imagesRefs.current[i]} />
                 <Article>
                   <ArticleHeading>{title}</ArticleHeading>
                 </Article>

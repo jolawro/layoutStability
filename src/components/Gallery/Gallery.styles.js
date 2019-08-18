@@ -23,14 +23,14 @@ export const GalleryItem = styled.li`
     display: block;
     padding-top: 100%;
   }
-`;
 
-export const GalleryImage = styled.img`
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  img {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 `;
