@@ -2,7 +2,12 @@ const LOREM_IPSUM = require("./loremIpsum");
 
 const spawnImages = countDimentions => numOfImages => {
   return [...new Array(numOfImages)].map((_, i) => {
-    return `https://picsum.photos/${countDimentions(i).width}/${countDimentions(i).height}`;
+    const { width, height } = countDimentions(i);
+    return {
+      width,
+      height,
+      src: `https://picsum.photos/${width}/${height}`
+    };
   });
 };
 
@@ -30,6 +35,6 @@ function capitalizeFirsLetter(string) {
 const getArticle = gallerySize => [{ type: "text", data: LOREM_IPSUM }, { type: "text", data: LOREM_IPSUM }, { type: "gallery", data: spawnRandomImages(gallerySize) }, { type: "text", data: LOREM_IPSUM }];
 
 const LOREM_WORDS = LOREM_IPSUM.split(" ");
-const getMoreArticles = (number = 20) => spawnTeaserImages(number).map((imageSrc, i) => ({ imageSrc, title: `${capitalizeFirsLetter(LOREM_WORDS[3 * i])} ${LOREM_WORDS[3 * i + 1]} ${LOREM_WORDS[3 * i + 2]}` }));
+const getMoreArticles = (number = 20) => spawnTeaserImages(number).map((image, i) => ({ image, title: `${capitalizeFirsLetter(LOREM_WORDS[3 * i])} ${LOREM_WORDS[3 * i + 1]} ${LOREM_WORDS[3 * i + 2]}` }));
 
 module.exports = { getArticle, getMoreArticles };

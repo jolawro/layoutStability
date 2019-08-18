@@ -98,7 +98,7 @@ module.exports = function(proxy, allowedHost) {
       app.use(noopServiceWorkerMiddleware());
     },
     headers: {
-      // "Feature-Policy": "unsized-media 'none';"
+      "Feature-Policy": "unsized-media 'none';"
     }
   };
 };

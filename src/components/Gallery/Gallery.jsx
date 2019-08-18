@@ -1,14 +1,13 @@
 import React from "react";
 import { GalleryContainer, GalleryItem, GalleryImage } from "./Gallery.styles";
-import { spawnRandomImages } from "../../helpers/spawnImages";
 
-const Gallery = ({ images, numOfImages = 10 }) => {
+const Gallery = ({ images }) => {
   return (
     <GalleryContainer>
-      {spawnRandomImages(numOfImages).map((src, i) => {
+      {images.map((image, i) => {
         return (
           <GalleryItem key={i}>
-            <GalleryImage src={src} alt="alt" width="100%" />
+            <GalleryImage {...image} alt="alt" />
           </GalleryItem>
         );
       })}

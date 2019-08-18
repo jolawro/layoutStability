@@ -52,10 +52,10 @@ const ArticlesCarousel = ({ articles, scrolledTo, setScrolledTo, visibleItems, s
       <CircleIcon name="i-arrow-left-07" onClick={() => setScrolledTo(Math.max(0, scrolledTo - 1))} />
       <CarouselContent ref={carouselRef}>
         <Carousel nOfItems={articles.length} scrolledTo={scrolledTo}>
-          {articles.map(({ imageSrc, title }, i) => {
+          {articles.map(({ image, title }, i) => {
             return (
               <CarouselItem key={i}>
-                <GalleryImage src={getImageSrc(i, imageSrc)} id={i} alt="article" ref={imagesRefs.current[i]} />
+                <GalleryImage width={image.width} height={image.height} src={getImageSrc(i, image.src)} id={i} alt="article" ref={imagesRefs.current[i]} />
                 <Article>
                   <ArticleHeading>{title}</ArticleHeading>
                 </Article>
