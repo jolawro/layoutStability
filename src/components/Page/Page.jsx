@@ -6,7 +6,7 @@ import Cookies from "../Cookies/Cookies";
 import Spinner from "../Spinner/Spinner";
 import { Link } from "react-router-dom";
 
-const Page = ({ contentLoaded, cookiesVisible, setCookiesVisible, renderPromo, children }) => {
+const Page = ({ contentLoaded, renderPromo, children }) => {
   return (
     <>
       <Menu />

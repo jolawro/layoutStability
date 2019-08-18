@@ -20,12 +20,14 @@ show how its done, not only talk how you should do it
 
 Do zaprezentowania:
 layout shifts
+Ładowanie loga
 no unsized media
+cookies request
 aspect ratio boxes
 lqip
 Ładowanie SVG
 foit fout - webfont loader
-cookies request animation frame
+preload fonts
 
 bonus:
 react loads

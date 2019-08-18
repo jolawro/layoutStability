@@ -1,9 +1,12 @@
 import React from "react";
 import { LogoContainer, LogoTitle, LogoSubtitle, LogoImage } from "./Logo.styles";
+import { ReactComponent as LogoSVG }  from './logo.svg';
 
 export const Logo = () => (
   <LogoContainer>
-    <LogoImage src="logo.svg" alt="logo" />
+    <LogoImage>
+      <LogoSVG />
+    </LogoImage>
     <LogoTitle>
       Layout
       <LogoSubtitle>Stability</LogoSubtitle>
