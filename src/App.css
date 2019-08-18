@@ -140,16 +140,6 @@ a {
   text-decoration: none;
 }
 
-html:not(.wf-active) p,
-html:not(.wf-active) strong,
-html:not(.wf-active) h1,
-html:not(.wf-active) h2,
-html:not(.wf-active) h3,
-html:not(.wf-active) h4 {
-  /* color: transparent !important;
-  background-color: #d5dde788; */
-  /* visibility: hidden; */
-}
 
 .wf-active p,
 .wf-active strong,
@@ -157,6 +147,6 @@ html:not(.wf-active) h4 {
 .wf-active h2,
 .wf-active h3,
 .wf-active h4 {
-  visibility: visible;
+  /* visibility: visible; */
   /* transition: background-color .3s; */
 }

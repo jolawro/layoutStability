@@ -20,7 +20,7 @@ export const LogoSubtitle = styled.span`
   font-weight: 300;
 `;
 
-export const LogoImage = styled.div`
+export const LogoImage = styled.img`
   margin-left: 20px;
   // width: 44px;
   // height: 44px;

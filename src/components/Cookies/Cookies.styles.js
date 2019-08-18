@@ -3,8 +3,8 @@ import { fromTheme } from "../../helpers/constants/colors";
 import { GAPS } from "../../helpers/constants/gaps";
 
 export const CookiesContainer = styled.div`
-  position: fixed;
-  top: -${GAPS.s};
+  // position: fixed;
+  top: 0;
   left: 0;
   z-index: 1;
   display: flex;
@@ -16,7 +16,5 @@ export const CookiesContainer = styled.div`
   color: ${fromTheme.bg("tertiary")};
   cursor: pointer;
 
-  transition: transform .5s;
-  transform: translateY(${({cookiesVisible}) => cookiesVisible ? GAPS.s : 0})
-
+  display: ${({ cookiesVisible }) => (cookiesVisible ? "flex" : "none")};
 `;

@@ -6,14 +6,14 @@ import { Invisible } from "../Icon/Icons";
 
 const Hero = () => {
   const [shiftScore, setShiftScore] = useState(0);
-  const [imageLoaded, setImageLoaded] = useState(false);
 
   useEffect(function() {
     let totalScore = 0;
     const observer = new PerformanceObserver(list => {
       for (const entry of list.getEntries()) {
-        console.log(entry);
-        setShiftScore(totalScore + entry.value);
+        console.log(totalScore, entry);
+        totalScore += entry.value;
+        setShiftScore(totalScore);
       }
     });
     observer.observe({ type: "layoutShift", buffered: true });
@@ -26,10 +26,7 @@ const Hero = () => {
   return (
     <HeroContainer>
       <DisturbFilter frequency={shiftScore / 10} />
-      <HeroImage src={imageLoaded ? hero.src : hero.preSrc} alt="Hero" intrinsicsize="1400 x 700" />
-      <Invisible>
-        <img src={hero.src} onLoad={() => setImageLoaded(true)} alt="Hero" />
-      </Invisible>
+      <HeroImage src={hero.src} alt="Hero" />
       <HeroTextContainer>
         <HeroText>
           Layout is <HeroStability stable={!shiftScore}>{shiftScore ? "Unstable" : "Stable"}</HeroStability>

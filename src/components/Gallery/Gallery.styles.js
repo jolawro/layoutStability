@@ -17,20 +17,8 @@ export const GalleryItem = styled.li`
   &:nth-child(odd) {
     background-color: ${fromTheme.base("subtle")}cc;
   }
-
-  &::after {
-    content: "";
-    display: block;
-    padding-top: 100%;
-  }
-
+  
   img {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
   }
 `;

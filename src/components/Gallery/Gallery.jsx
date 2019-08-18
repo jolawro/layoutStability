@@ -7,7 +7,7 @@ const Gallery = ({ images }) => {
       {images.map((image, i) => {
         return (
           <GalleryItem key={i}>
-            <img intrinsicsize={`${image.width} x ${image.height}`} src={image.src} alt="alt" />
+            <img src={image.src} alt="alt" />
           </GalleryItem>
         );
       })}
