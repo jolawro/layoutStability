@@ -5,7 +5,7 @@ export function useLayoutObserver() {
 
   const observer = useRef(
     new PerformanceObserver(list => {
-      console.log("list", list.getEntries());
+      list.getEntries().map(console.log)
       const newEntries = list.getEntries().map(entry => entry.value)
       updateEntries([...entries, ...newEntries]);
     })
