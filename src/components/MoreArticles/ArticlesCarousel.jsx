@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, createRef, useCallback } from "react";
-import { CarouselContainer, Carousel, CarouselItem, CarouselContent, Article, ArticleHeading } from "./MoreArticles.styles";
+import { Carousel, CarouselItem, CarouselContent, Article, ArticleHeading } from "./MoreArticles.styles";
 import { CircleIcon } from "../Icon/Icon";
 
 const ArticlesCarousel = ({ articles, scrolledTo, setScrolledTo, visibleItems, setVisibleItems }) => {

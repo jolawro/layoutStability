@@ -1,27 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { HeroContainer, HeroText, HeroTextContainer, HeroImage, HeroStability } from "./Hero.styles";
 import DisturbFilter from "./DisturbFilter";
 import hero from "./hero.jpg";
-import { Invisible } from "../Icon/Icons";
+import { useLayoutObserver } from "../../hooks/useLayoutObserver";
 
 const Hero = () => {
-  const [shiftScore, setShiftScore] = useState(0);
-
-  useEffect(function() {
-    let totalScore = 0;
-    const observer = new PerformanceObserver(list => {
-      for (const entry of list.getEntries()) {
-        console.log(totalScore, entry);
-        totalScore += entry.value;
-        setShiftScore(totalScore);
-      }
-    });
-    observer.observe({ type: "layoutShift", buffered: true });
-
-    return () => {
-      observer.disconnect();
-    };
-  }, []);
+  const entries = useLayoutObserver();
+  const shiftScore = entries.reduce((acc, curr) => acc + curr, 0);
 
   return (
     <HeroContainer>
