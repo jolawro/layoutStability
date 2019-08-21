@@ -14,7 +14,7 @@ export const CarouselContent = styled.div`
   flex-grow: 1;
   height: 100%;
   max-width: 600px;
-  overflow-x: hidden;
+  overflow: hidden;
   margin: 0 ${GAPS.s};
 `;
 
@@ -29,8 +29,7 @@ export const CarouselItem = styled(GalleryItem)`
 
 export const Carousel = styled.ul`
   display: block;
-  position: absolute;
-  top: 0;
+  position: relative;
   height: 100%;
   width: ${({ nOfItems }) => nOfItems * 300}px;
   transform: translateX(${({ scrolledTo }) => -scrolledTo * 600}px);

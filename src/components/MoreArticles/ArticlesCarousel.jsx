@@ -47,7 +47,7 @@ const ArticlesCarousel = ({ articles, scrolledTo, setScrolledTo, visibleItems, s
   }
 
   return (
-    <CarouselContainer>
+    <>
       <CircleIcon name="i-arrow-left-07" onClick={() => setScrolledTo(Math.max(0, scrolledTo - 1))} />
       <CarouselContent ref={carouselRef}>
         <Carousel nOfItems={articles.length} scrolledTo={scrolledTo}>
@@ -69,7 +69,7 @@ const ArticlesCarousel = ({ articles, scrolledTo, setScrolledTo, visibleItems, s
           setScrolledTo(Math.min(articles.length / 2 - 1, scrolledTo + 1));
         }}
       />
-    </CarouselContainer>
+    </>
   );
 };
 

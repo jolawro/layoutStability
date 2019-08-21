@@ -19,6 +19,7 @@ export const GalleryItem = styled.li`
   }
   
   img {
+    display: block;
     width: 100%;
   }
 `;

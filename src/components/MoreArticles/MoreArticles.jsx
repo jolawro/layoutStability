@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { Articles } from "./MoreArticles.styles";
+import { Articles, CarouselContainer } from "./MoreArticles.styles";
 import { SectionHeading } from "../Layout/Layout.styles";
 import ArticlesCarousel from "./ArticlesCarousel";
+import Spinner from "../Spinner/Spinner";
 
 const MoreArticles = () => {
   const [scrolledTo, setScrolledTo] = useState(0);
@@ -31,7 +32,7 @@ const MoreArticles = () => {
   return (
     <Articles>
       <SectionHeading>More articles {visibleItems.join(", ")}</SectionHeading>
-      {articles && <ArticlesCarousel {...props} />}
+      <CarouselContainer>{articles ? <ArticlesCarousel {...props} /> : <Spinner />}</CarouselContainer>
     </Articles>
   );
 };
