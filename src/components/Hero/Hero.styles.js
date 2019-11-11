@@ -31,30 +31,6 @@ export const HeroText = styled.h3`
   color: ${fromTheme.base("secondary")};
 `;
 
-export const HeroStability = styled.strong`
-  font-weight: bold;
-  color: ${({ stable }) => (stable ? "inherit" : "#e2234c")};
-  animation: ${({ stable }) => (stable ? "none" : "squiggly-anim 0.34s linear infinite")};
-
-  @keyframes squiggly-anim {
-    0% {
-      filter: url("#squiggly-0");
-    }
-    25% {
-      filter: url("#squiggly-1");
-    }
-    50% {
-      filter: url("#squiggly-2");
-    }
-    75% {
-      filter: url("#squiggly-3");
-    }
-    100% {
-      filter: url("#squiggly-4");
-    }
-  }
-`;
-
 export const HeroImage = styled.img`
   position: absolute;
   left: 0;

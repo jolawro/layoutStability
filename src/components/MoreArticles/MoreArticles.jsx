@@ -6,7 +6,6 @@ import Spinner from "../Spinner/Spinner";
 
 const MoreArticles = () => {
   const [scrolledTo, setScrolledTo] = useState(0);
-  const [visibleItems, setVisibleItems] = useState([0, 1]);
   const [articles, setArticles] = useState(null);
 
   useEffect(() => {
@@ -25,13 +24,12 @@ const MoreArticles = () => {
   const props = {
     articles,
     scrolledTo,
-    setScrolledTo,
-    visibleItems,
-    setVisibleItems
+    setScrolledTo
   };
+
   return (
     <Articles>
-      <SectionHeading>More articles {visibleItems.join(", ")}</SectionHeading>
+      <SectionHeading>More articles</SectionHeading>
       <CarouselContainer>{articles ? <ArticlesCarousel {...props} /> : <Spinner />}</CarouselContainer>
     </Articles>
   );
