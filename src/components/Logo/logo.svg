@@ -1,2 +1,7 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="44px" height="44px" viewBox="-0.5 -0.5 53 53" style="background-color: rgb(255, 255, 255);"><defs/><g><rect x="0" y="0" width="40" height="40" fill="none" stroke="#000000" pointer-events="none"/><ellipse cx="30" cy="30" rx="20" ry="20" fill="none" stroke="#000000" stroke-width="4" pointer-events="none"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="44px" height="44px" viewBox="-0.5 -0.5 53 53" style="background-color: rgb(255, 255, 255);">
+    <g>
+        <rect x="0" y="0" width="40" height="40" fill="none" stroke="#000000" pointer-events="none"/>
+        <ellipse cx="30" cy="30" rx="20" ry="20" fill="none" stroke="#000000" stroke-width="4" pointer-events="none"/>
+    </g>
+</svg>
