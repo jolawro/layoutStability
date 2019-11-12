@@ -22,7 +22,4 @@ export const LogoSubtitle = styled.span`
 
 export const LogoImage = styled.img`
   margin-left: 20px;
-  // width: 44px;
-  // height: 44px;
-  // background-color: ${fromTheme.bg("primary")};
 `;

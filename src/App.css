@@ -140,13 +140,10 @@ a {
   text-decoration: none;
 }
 
-
 .wf-active p,
 .wf-active strong,
 .wf-active h1,
 .wf-active h2,
 .wf-active h3,
 .wf-active h4 {
-  /* visibility: visible; */
-  /* transition: background-color .3s; */
 }
