@@ -10,7 +10,7 @@ const Hero = () => {
     <HeroContainer>
       <HeroImage src={isImageLoaded ? hero.src : hero.preSrc} alt="Hero" />
       <Invisible>
-        <img src={hero.src} onLoad={() => setImageLoaded(true)} />
+        <img src={hero.src} onLoad={() => setImageLoaded(true)} alt="hero"/>
       </Invisible>
       <HeroTextContainer>
         <HeroText>
