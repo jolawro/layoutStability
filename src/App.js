@@ -8,14 +8,6 @@ import Article from "./components/Article/Atricle";
 import WebFont from "webfontloader";
 
 const App = () => {
-  useEffect(() => {
-    WebFont.load({
-      google: {
-        families: ['Dosis:300,400,700']
-      }
-    })
-  }, []);
-
   return (
     <Router>
       <ThemeProvider theme={THEMES.light}>

@@ -1,1 +1,2 @@
 W jaki sposób stworzysz responsywny, kwadratowy kontener?
+Jak nazywa się technika wyświetlania obrazka w niskiej rozdzielczości zanim załaduje się jego pełnowymiarowa wersja?
